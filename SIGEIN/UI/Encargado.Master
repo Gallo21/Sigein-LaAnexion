@@ -1,0 +1,99 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Encargado.master.cs" Inherits="UI.Encargado" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link href="Encargado.css" rel="stylesheet" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 141px;
+            margin-bottom: 0px;
+        }
+    </style>
+</head>
+<body>
+  
+    <form id="form1" runat="server">
+    <div>
+
+        <div id="cabecera">
+            <div id ="contenidoCabecera">
+  
+   <div id="logo">
+             <img src="images/Sin fondo.png" alt="Sin fondo" class="auto-style1" />
+        </div>
+        <div id="titulo">
+          
+           <img src="images/letras.png" alt ="letras" />
+        </div>
+ 
+            </div>
+        </div>
+
+<ul class="mi-menu">
+    
+
+   <li><a href="URL_enlace_4"> Gestión Informatica </a>
+    <ul>
+      <li><a href="AgregarDepartamento.aspx"> Agregar Nuevo Departamento</a></li>       
+    </ul>
+       </li>
+  <li><a href="URL_enlace_3"> Inventario </a>
+       <ul>
+      <li><a href="URL_enlace_2.1"> Clasificar Equipos con Avería</a></li>
+      <li><a href="URL_enlace_2.2"> Registrar Consumibles</a></li>
+      <li><a href="URL_enlace_2.3"> Historial</a></li>
+       
+    </ul>
+  </li>
+  
+      <li>
+    <a href="#"> Asignar Trabajo </a>
+    <ul>
+      <li><a href="URL_enlace_2.1"> Asignar Trabajo </a></li>
+      <li><a href="URL_enlace_2.2"> Autoasignar Trabajo</a></li>
+      <li><a href="URL_enlace_2.3"> Consultar Trabajo</a></li>
+         <li><a href="URL_enlace_2.4"> Modificar Trabajo</a></li>
+         <li><a href="URL_enlace_2.5"> Consultar trabajo Nuevo</a></li>
+          <li><a href="URL_enlace_2.6"> Reportar Avería Resuelta</a></li>
+    </ul>
+  </li>
+
+      <li><a href="URL_enlace_2"> Usuario</a>
+       <ul>
+      <li><a href="CrearCuenta.aspx"> Crear Cuenta </a></li>
+      <li><a href="URL_enlace_1.2"> Desactivar Cuenta</a></li>
+      <li><a href="URL_enlace_1.3"> Informe del Reporte </a></li>
+    </ul>
+  </li>
+     <li><a href="Encargado.aspx"> Inicio</a></li>
+      
+</ul>
+
+
+        <div id="bajo">
+            <div id="columnaizq"></div>
+             <div id="columnaCentro">
+          <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        <h1>&nbsp;</h1>
+        </asp:ContentPlaceHolder>
+
+             </div>
+              <div id="columnaDer"></div>
+             <div id="pie"></div>
+        </div>
+
+         <div id="">
+
+
+        </div>
+
+       
+    </div>
+    </form>
+</body>
+</html>
