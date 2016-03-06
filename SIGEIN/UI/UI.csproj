@@ -66,8 +66,45 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\color-blue.css" />
+    <Content Include="css\font-awesome.css" />
+    <Content Include="css\jquery.fancybox.css" />
+    <Content Include="css\layerslider.css" />
+    <Content Include="css\owl.carousel.css" />
+    <Content Include="css\skin.css" />
+    <Content Include="css\styles.css" />
+    <Content Include="images\home.png" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\menu.png" />
+    <Content Include="images\piepag.png" />
+    <Content Include="js\greensock.js" />
+    <Content Include="js\jquery-ui-tabs-rotate.js" />
+    <Content Include="js\jquery-ui.min.js" />
+    <Content Include="js\jquery.autocomplete.min.js" />
+    <Content Include="js\jquery.easypiechart.js" />
+    <Content Include="js\jquery.fancybox-media.js" />
+    <Content Include="js\jquery.fancybox.pack.js" />
+    <Content Include="js\jquery.flot.categories.js" />
+    <Content Include="js\jquery.flot.js" />
+    <Content Include="js\jquery.flot.pie.js" />
+    <Content Include="js\jquery.isotope.min.js" />
+    <Content Include="js\jquery.migrate.min.js" />
+    <Content Include="js\jquery.min.js" />
+    <Content Include="js\jquery.superscrollorama.js" />
+    <Content Include="js\jquery.tweet.js" />
+    <Content Include="js\jquery.ui.accordion.min.js" />
+    <Content Include="js\jquery.ui.core.min.js" />
+    <Content Include="js\jquery.ui.tabs.min.js" />
+    <Content Include="js\jquery.ui.widget.min.js" />
+    <Content Include="js\layerslider.kreaturamedia.jquery.js" />
+    <Content Include="js\layerslider.transitions.js" />
+    <Content Include="js\owl.carousel.min.js" />
+    <Content Include="js\scripts.js" />
+    <Content Include="js\TimelineMax.min.js" />
+    <Content Include="js\TweenMax.min.js" />
     <Content Include="packages.config" />
     <Content Include="Encargado.Master" />
+    <Content Include="Administrador.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -83,6 +120,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administrador.Master.cs">
+      <DependentUpon>Administrador.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador.Master.designer.cs">
+      <DependentUpon>Administrador.Master</DependentUpon>
+    </Compile>
     <Compile Include="CRUDUsuario.aspx.cs">
       <DependentUpon>CRUDUsuario.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -109,6 +153,7 @@
       <Name>WCF</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
