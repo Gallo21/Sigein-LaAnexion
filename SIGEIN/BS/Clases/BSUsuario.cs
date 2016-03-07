@@ -42,5 +42,10 @@ namespace BS.Clases
         {
             return cadUsuario.ValidarUsuario(id, pass); 
         }
+
+        public Usuario ComprobarCaducidad(Usuario usuario)
+        {
+            return cadUsuario.ComprobarCaducidad(usuario);
+        }
     }
 }

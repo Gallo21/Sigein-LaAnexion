@@ -10,7 +10,7 @@ namespace CONTENEDORES
     {
         private string IdUsuario, NombreUsuario, Contraseña, NombreDepartamento, Ocupacion, Apellido1, Apellido2, Email, TelefonoCelular;
         private int AccesoIntrusos, EstatusBloqueo;
-
+        private DateTime CaducidadContraseña;
         public string idusuario
         {
             get
@@ -151,6 +151,19 @@ namespace CONTENEDORES
             set
             {
                 TelefonoCelular = value;
+            }
+        }
+
+        public DateTime caducidadcontraseña
+        {
+            get
+            {
+                return CaducidadContraseña;
+            }
+
+            set
+            {
+                CaducidadContraseña = value;
             }
         }
     }

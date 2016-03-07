@@ -66,6 +66,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CambioContra.aspx" />
     <Content Include="css\color-blue.css" />
     <Content Include="css\font-awesome.css" />
     <Content Include="css\jquery.fancybox.css" />
@@ -102,6 +103,7 @@
     <Content Include="js\scripts.js" />
     <Content Include="js\TimelineMax.min.js" />
     <Content Include="js\TweenMax.min.js" />
+    <Content Include="LoginUsuario.aspx" />
     <Content Include="packages.config" />
     <Content Include="Encargado.Master" />
     <None Include="Web.Debug.config">
@@ -119,6 +121,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CambioContra.aspx.cs">
+      <DependentUpon>CambioContra.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CambioContra.aspx.designer.cs">
+      <DependentUpon>CambioContra.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CRUDUsuario.aspx.cs">
       <DependentUpon>CRUDUsuario.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -132,6 +141,13 @@
     </Compile>
     <Compile Include="Encargado.Master.designer.cs">
       <DependentUpon>Encargado.Master</DependentUpon>
+    </Compile>
+    <Compile Include="LoginUsuario.aspx.cs">
+      <DependentUpon>LoginUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginUsuario.aspx.designer.cs">
+      <DependentUpon>LoginUsuario.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -17,7 +17,7 @@ namespace UI.CRUDS
         CONTENEDORES.Usuario contUsuario = new CONTENEDORES.Usuario();
         protected void Page_Load(object sender, EventArgs e)
         {
-            // Label9.Text = Session["NombreVariable"].ToString();
+            // Label9.Text = Session["IdUsuario"].ToString();
             if (!IsPostBack)
             {
                 ddlDepartamento.DataSource = wcfDepar.DesplegarDepartamentos();

@@ -140,7 +140,7 @@ namespace DS.ClasesAccesoDatos
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.CommandText = "BuscarUsuario";
 
-            cmd.Parameters.Add(new SqlParameter("@IdUsuario", System.Data.SqlDbType.VarChar, 30));
+            cmd.Parameters.Add(new SqlParameter("@IdUsuario", System.Data.SqlDbType.VarChar, 20));
             cmd.Parameters["@IdUsuario"].Value = usuario.idusuario;
 
             if (cnn.State == System.Data.ConnectionState.Closed) cnn.Open();
@@ -210,10 +210,10 @@ namespace DS.ClasesAccesoDatos
             cmd.CommandType = System.Data.CommandType.StoredProcedure;
             cmd.CommandText = "ValidarUsuario";
 
-            cmd.Parameters.Add(new SqlParameter("@IdUsuario", System.Data.SqlDbType.VarChar, 30));
+            cmd.Parameters.Add(new SqlParameter("@IdUsuario", System.Data.SqlDbType.VarChar, 20));
             cmd.Parameters["@IdUsuario"].Value = id;
 
-            cmd.Parameters.Add(new SqlParameter("@Contraseña", System.Data.SqlDbType.VarChar, 20));
+            cmd.Parameters.Add(new SqlParameter("@Contraseña", System.Data.SqlDbType.VarChar, 50));
             cmd.Parameters["@Contraseña"].Value = pass;
 
             if (cnn.State == System.Data.ConnectionState.Closed) cnn.Open();
@@ -229,6 +229,33 @@ namespace DS.ClasesAccesoDatos
             if (cnn.State == System.Data.ConnectionState.Open) cnn.Close();
 
             cmd.Parameters.Clear();
+            return conteUsuario;
+        }
+
+        public Usuario ComprobarCaducidad(Usuario usuario)
+        {
+            SqlConnection cnn = conexion.getConexion();
+            SqlDataReader dtr;
+            // SqlCommand cmd = new SqlCommand("ConsultarUsuario", cnn);
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = cnn;
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "ComprobarCaducidad";
+
+            cmd.Parameters.Add(new SqlParameter("@idUsuario", System.Data.SqlDbType.VarChar, 20));
+            cmd.Parameters["@idUsuario"].Value = usuario.idusuario;
+
+            if (cnn.State == System.Data.ConnectionState.Closed) cnn.Open();
+            dtr = cmd.ExecuteReader();
+
+            if (dtr.HasRows)
+            {
+                dtr.Read();
+                conteUsuario.caducidadcontraseña = Convert.ToDateTime(dtr[0]);
+            }
+            cmd.Parameters.Clear();
+            if (cnn.State == System.Data.ConnectionState.Open) cnn.Close();
+
             return conteUsuario;
         }
     }

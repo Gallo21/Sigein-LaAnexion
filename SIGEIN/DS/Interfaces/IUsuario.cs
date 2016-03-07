@@ -23,5 +23,7 @@ namespace DS.Interfaces
         CONTENEDORES.Usuario ValidarUsuario(string id, string pass);
 
         List<CONTENEDORES.Usuario> ListarUsuario();
+
+        CONTENEDORES.Usuario ComprobarCaducidad(Usuario usuario);
     }
 }

@@ -21,5 +21,7 @@ namespace BS.Interfaces
         List<CONTENEDORES.Usuario> ListarUsuario();
 
         CONTENEDORES.Usuario ValidarUsuario(string id, string pass);
+
+        CONTENEDORES.Usuario ComprobarCaducidad(Usuario usuario);
     }
 }

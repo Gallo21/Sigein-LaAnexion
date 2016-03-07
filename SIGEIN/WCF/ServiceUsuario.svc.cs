@@ -44,5 +44,10 @@ namespace WCF
         {
            return bsUsuario.ValidarUsuario(id, pass);
         }
+
+        public Usuario ComprobarCaducidad(Usuario usuario)
+        {
+            return bsUsuario.ComprobarCaducidad(usuario);
+        }
     }
 }

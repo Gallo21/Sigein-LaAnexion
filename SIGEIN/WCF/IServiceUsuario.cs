@@ -28,6 +28,9 @@ namespace WCF
         List<CONTENEDORES.Usuario> ListarUsuario();
 
         [OperationContract]
-        CONTENEDORES.Usuario ValidarUsuario(string id, string pass);      
+        CONTENEDORES.Usuario ValidarUsuario(string id, string pass);
+
+        [OperationContract]
+        Usuario ComprobarCaducidad(Usuario usuario);
     }
 }
